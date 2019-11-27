@@ -1,1 +1,1 @@
-g++ start.cpp `pkg-config --cflags --libs gtkmm-3.0`
+g++ start.cpp `pkg-config --cflags --libs gtkmm-3.0` -I/usr/local/include -L/usr/local/lib -lopencv_core -lopencv_highgui -lopencv_imgproc -lopencv_face -lopencv_objdetect -lopencv_imgcodecs -lopencv_video -lopencv_videoio

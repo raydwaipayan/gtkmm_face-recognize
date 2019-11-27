@@ -93,7 +93,7 @@
                       <object class="GtkEntry" id="entry_source">
                         <property name="visible">True</property>
                         <property name="can_focus">True</property>
-                        <property name="text" translatable="yes">~/home/Desktop/workspace/miniproject/src</property>
+                        <property name="text" translatable="yes">/home/dwai/Desktop/workspace/</property>
                       </object>
                       <packing>
                         <property name="expand">False</property>
@@ -105,7 +105,7 @@
                       <object class="GtkEntry" id="entry_haar">
                         <property name="visible">True</property>
                         <property name="can_focus">True</property>
-                        <property name="text" translatable="yes">~/home/Desktop/workspace/miniproject/src/etc/</property>
+                        <property name="text" translatable="yes">/home/dwai/Desktop/workspace/src/etc/</property>
                       </object>
                       <packing>
                         <property name="expand">False</property>
@@ -136,41 +136,35 @@
                     <property name="can_focus">False</property>
                     <property name="orientation">vertical</property>
                     <child>
-                      <object class="GtkCheckButton" id="source_default">
-                        <property name="label" translatable="yes">Use current working dir</property>
-                        <property name="visible">True</property>
-                        <property name="can_focus">True</property>
-                        <property name="receives_default">False</property>
-                        <property name="draw_indicator">True</property>
-                      </object>
-                      <packing>
-                        <property name="expand">False</property>
-                        <property name="fill">True</property>
-                        <property name="padding">5</property>
-                        <property name="position">0</property>
-                      </packing>
-                    </child>
-                    <child>
-                      <object class="GtkCheckButton">
-                        <property name="label" translatable="yes">User current working dir</property>
-                        <property name="visible">True</property>
-                        <property name="can_focus">True</property>
-                        <property name="receives_default">False</property>
-                        <property name="draw_indicator">True</property>
-                      </object>
-                      <packing>
-                        <property name="expand">False</property>
-                        <property name="fill">True</property>
-                        <property name="padding">6</property>
-                        <property name="position">1</property>
-                      </packing>
-                    </child>
-                    <child>
                       <object class="GtkButton" id="button_compile">
                         <property name="label" translatable="yes">Compile</property>
                         <property name="visible">True</property>
                         <property name="can_focus">True</property>
                         <property name="receives_default">True</property>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="padding">4</property>
+                        <property name="pack_type">end</property>
+                        <property name="position">0</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkSeparator">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">1</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkSeparator">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
                       </object>
                       <packing>
                         <property name="expand">False</property>
@@ -223,9 +217,10 @@
                               </packing>
                             </child>
                             <child>
-                              <object class="GtkEntry">
+                              <object class="GtkEntry" id="entry_capture_location">
                                 <property name="visible">True</property>
                                 <property name="can_focus">True</property>
+                                <property name="text" translatable="yes">/home/dwai/Desktop/workspace/src/test_data/</property>
                                 <property name="placeholder_text" translatable="yes">Absolute Path</property>
                               </object>
                               <packing>
@@ -257,7 +252,7 @@
                               </packing>
                             </child>
                             <child>
-                              <object class="GtkEntry">
+                              <object class="GtkEntry" id="entry_imgnum">
                                 <property name="visible">True</property>
                                 <property name="can_focus">True</property>
                                 <property name="placeholder_text" translatable="yes">Integer(1-200)</property>
@@ -278,7 +273,41 @@
                           <object class="GtkPaned">
                             <property name="visible">True</property>
                             <property name="can_focus">True</property>
-                            <property name="position">334</property>
+                            <property name="position">167</property>
+                            <child>
+                              <object class="GtkLabel">
+                                <property name="visible">True</property>
+                                <property name="can_focus">False</property>
+                                <property name="label" translatable="yes">Name of User: </property>
+                              </object>
+                              <packing>
+                                <property name="resize">False</property>
+                                <property name="shrink">True</property>
+                              </packing>
+                            </child>
+                            <child>
+                              <object class="GtkEntry" id="entry_name">
+                                <property name="visible">True</property>
+                                <property name="can_focus">True</property>
+                                <property name="placeholder_text" translatable="yes">Name of user to train</property>
+                              </object>
+                              <packing>
+                                <property name="resize">True</property>
+                                <property name="shrink">True</property>
+                              </packing>
+                            </child>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">True</property>
+                            <property name="position">2</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkPaned">
+                            <property name="visible">True</property>
+                            <property name="can_focus">True</property>
+                            <property name="position">333</property>
                             <child>
                               <object class="GtkSeparator">
                                 <property name="visible">True</property>
@@ -298,14 +327,14 @@
                               </object>
                               <packing>
                                 <property name="resize">True</property>
-                                <property name="shrink">True</property>
+                                <property name="shrink">False</property>
                               </packing>
                             </child>
                           </object>
                           <packing>
                             <property name="expand">False</property>
                             <property name="fill">True</property>
-                            <property name="position">2</property>
+                            <property name="position">3</property>
                           </packing>
                         </child>
                       </object>
@@ -358,9 +387,11 @@
                               </packing>
                             </child>
                             <child>
-                              <object class="GtkEntry">
+                              <object class="GtkEntry" id="entry_imgloc">
                                 <property name="visible">True</property>
                                 <property name="can_focus">True</property>
+                                <property name="text" translatable="yes">/home/dwai/Desktop/workspace/src/test_data</property>
+                                <property name="placeholder_text" translatable="yes">Absolute Path to image data</property>
                               </object>
                               <packing>
                                 <property name="resize">True</property>
@@ -542,7 +573,7 @@
                           </packing>
                         </child>
                         <child>
-                          <object class="GtkEntry">
+                          <object class="GtkEntry" id="entry_imgpath">
                             <property name="visible">True</property>
                             <property name="can_focus">True</property>
                             <property name="placeholder_text" translatable="yes">Absolute Path to Image</property>
@@ -560,7 +591,7 @@
                       </packing>
                     </child>
                     <child>
-                      <object class="GtkCheckButton" id="check_camera">
+                      <object class="GtkCheckButton" id="button_camera">
                         <property name="label" translatable="yes">Capture from Camera</property>
                         <property name="visible">True</property>
                         <property name="can_focus">True</property>
@@ -574,21 +605,43 @@
                       </packing>
                     </child>
                     <child>
+                      <object class="GtkPaned">
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="position">196</property>
+                        <child>
+                          <object class="GtkLabel">
+                            <property name="visible">True</property>
+                            <property name="can_focus">False</property>
+                            <property name="label" translatable="yes">Timeout:</property>
+                          </object>
+                          <packing>
+                            <property name="resize">False</property>
+                            <property name="shrink">True</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkEntry" id="entry_duration">
+                            <property name="visible">True</property>
+                            <property name="can_focus">True</property>
+                            <property name="placeholder_text" translatable="yes">Duration of capture in second</property>
+                          </object>
+                          <packing>
+                            <property name="resize">True</property>
+                            <property name="shrink">True</property>
+                          </packing>
+                        </child>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">2</property>
+                      </packing>
+                    </child>
+                    <child>
                       <object class="GtkGrid">
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
-                        <child>
-                          <object class="GtkButton">
-                            <property name="label" translatable="yes">Recognize</property>
-                            <property name="visible">True</property>
-                            <property name="can_focus">True</property>
-                            <property name="receives_default">True</property>
-                          </object>
-                          <packing>
-                            <property name="left_attach">2</property>
-                            <property name="top_attach">0</property>
-                          </packing>
-                        </child>
                         <child>
                           <object class="GtkButton" id="button_cancel">
                             <property name="label" translatable="yes">Cancel</property>
@@ -598,6 +651,18 @@
                           </object>
                           <packing>
                             <property name="left_attach">0</property>
+                            <property name="top_attach">0</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkButton" id="button_recognize">
+                            <property name="label" translatable="yes">Recognize</property>
+                            <property name="visible">True</property>
+                            <property name="can_focus">True</property>
+                            <property name="receives_default">True</property>
+                          </object>
+                          <packing>
+                            <property name="left_attach">2</property>
                             <property name="top_attach">0</property>
                           </packing>
                         </child>
@@ -615,7 +680,7 @@
                       <packing>
                         <property name="expand">False</property>
                         <property name="fill">True</property>
-                        <property name="position">2</property>
+                        <property name="position">3</property>
                       </packing>
                     </child>
                   </object>

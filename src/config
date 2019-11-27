@@ -1,0 +1,5 @@
+imageCapture=true
+imageDir=/var/lib/motioneye/Camera1
+
+timeout=1
+threshold=100.00
