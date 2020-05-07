@@ -8,9 +8,10 @@ The project was created as a sole purpose to use in experimentation of performan
 
 ## Installation
 #### Requirements
-* GTK3mm3.0
-* OpenCV 
+* GTKmm-3.0
+* OpenCV
 
 #### How to install?
 ``` ./install.sh ```
+
 A binary called start will be generated. Run it and the application should pop up right away.
